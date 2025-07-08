@@ -38,7 +38,7 @@
       <section class="section hero-section">
         <div class="container hero-content">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button class="button" type="button" data-modal-open>Order Service</button>
         </div>
       </section>
 
@@ -323,7 +323,7 @@
           <p class="footer-text">Increase the flow of customers and sales for your business with digital marketing & growth solutions.</p>
         </div>
         <div class="footer-social">
-          <p class="social-title">Social media</p>
+          <p class="footer-title">Social media</p>
           <ul class="social-list">
             <li class="social-item">
               <a href="" class="social-link">
@@ -355,7 +355,78 @@
             </li>
           </ul>
         </div>
+        <div class="footer-right">
+          <p class="footer-title">Subscribe</p>
+          <div class="footer-form">
+            <input class="dark" type="email" name="email" placeholder="Email" />
+            <div class="button small button-icon" type="submit">
+              Subscribe
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-message"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <div class="modal-overlay" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" type="button" data-modal-close>
+          <svg class="icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <form class="form" name="issue_report_form" autocomplete="off">
+          <fieldset>
+            <legend class="form-legend">Leave your contacts and we will call you back</legend>
+            <label for="username" class="form-label">
+              Name
+              <div class="form-input">
+                <svg class="icon" width="12" height="12">
+                  <use href="./images/icons.svg#icon-user"></use>
+                </svg>
+                <input class="input" id="username" type="text" name="username" />
+              </div>
+            </label>
+            <label for="phone" class="form-label">
+              Phone
+              <div class="form-input">
+                <svg class="icon" width="13" height="13">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+                <input class="input" id="phone" type="tel" name="phone" />
+              </div>
+            </label>
+            <label for="email" class="form-label">
+              Email
+              <div class="form-input">
+                <svg class="icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+                <input class="input" id="email" type="email" name="email" />
+              </div>
+            </label>
+            <label for="comment" class="form-label">
+              Comment
+              <textarea class="form-textarea" name="comment" placeholder="Text input"></textarea>
+            </label>
+            <label for="terms" class="form-label form-terms">
+              <input type="checkbox" id="terms" name="terms" class="checkbox-input" />
+              <span class="checkbox">
+                <svg class="icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-checked"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the &nbsp;
+              <a href="">Privacy Policy</a>
+            </label>
+
+            <button class="button" type="submit">Send</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
